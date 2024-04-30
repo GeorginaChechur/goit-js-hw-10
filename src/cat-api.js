@@ -1,6 +1,11 @@
 import axios from "axios";
+const apiKey = process.env.REACT_APP_CAT_API_KEY; 
 
-axios.defaults.headers.common["x-api-key"] = "live_YdAdDJAF61GOGsQAgG5F2rwzq2CUzdyZURocTTyo24sFz8hCAkeq2UZmlbogkU8Q";
+if (!apiKey) {
+  throw new Error('API key is not provided');
+}
+
+axios.defaults.headers.common["x-api-key"] = apiKey;
 
 export function fetchBreeds() {
   return axios.get('https://api.thecatapi.com/v1/breeds')
