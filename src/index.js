@@ -5,7 +5,6 @@ import SlimSelect from 'slim-select'
 import Notiflix from 'notiflix';
 
 
-axios.defaults.headers.common["x-api-key"] = "live_YdAdDJAF61GOGsQAgG5F2rwzq2CUzdyZURocTTyo24sFz8hCAkeq2UZmlbogkU8Q";
 const select = document.querySelector('.breed-select');
 const loader = document.querySelector('.loader');
 const catInfoDiv = document.querySelector('.cat-info');
